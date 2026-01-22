@@ -2,34 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Jaemin Cho</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav>
-        <div class="logo">Jaemin Cho</div>
+        <div class="logo">Jaemin <span>Cho</span></div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="experience.html">Experience</a></li>
+            <li><a href="experience.html" class="active">Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="education.html">Education</a></li>
         </ul>
     </nav>
 
-    <section>
-        <h1>Work Experience</h1>
+    <header style="padding: 60px 20px;">
+        <h1>Professional Experience</h1>
+        <p class="subtitle">Engineering Co-ops, Research & Design Teams</p>
+    </header>
+
+    <div class="container">
         
-        <div class="card">
-            <h3>Communications Engineering Co-op Student</h3>
-            <span class="date">NAV CANADA | Ottawa, ON | May 2025 - Aug. 2025</span>
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>NAV CANADA</h3>
+            <span class="role">Communications Engineering Co-op Student</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> May 2025 - Aug 2025 | Ottawa, ON</span>
             <ul>
-                <li><strong>Hardware Design:</strong> Designed and built a high-frequency radio transmitter emulator using Raspberry Pi and Python, integrating GPIO relay control.</li>
-                <li><strong>Circuit Engineering:</strong> Engineered transistor-based level shifting circuits with 2N3904 BJTs to safely convert 3.3V signals to 24V for MOXA digital I/O.</li>
-                <li><strong>Documentation:</strong> Authored detailed technical reports explaining hardware-software system interactions for SR&ED documentation.</li>
-                <li><strong>Testing:</strong> Developed fault detection logic utilizing oscilloscopes and multimeters for validation.</li>
+                [cite_start]<li><strong>Hardware Design:</strong> Designed and built a high-frequency radio transmitter emulator using <strong>Raspberry Pi</strong> and <strong>Python</strong>, integrating GPIO relay control for dynamic frequency switching[cite: 120, 121].</li>
+                [cite_start]<li><strong>Circuit Engineering:</strong> Engineered transistor-based level shifting circuits with <strong>2N3904 BJTs</strong> to safely convert 3.3V signals to 24V for MOXA digital I/O[cite: 122].</li>
+                [cite_start]<li><strong>Validation:</strong> Developed fault detection, state logic, and timing control systems utilizing oscilloscopes and multimeters[cite: 124].</li>
+                [cite_start]<li><strong>Reporting:</strong> Authored technical reports for SR&ED documentation and system traceability[cite: 125].</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">Circuit Design</span>
+                <span class="tag">SR&ED</span>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>Western Skylark CubeSat</h3>
+            <span class="role">Remote Stations Team Member</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Dec 2025 - Present | London, ON</span>
+            <ul>
+                [cite_start]<li>Collaborating on the ground station communication infrastructure for CubeSat operations[cite: 114, 115].</li>
             </ul>
         </div>
-    </section>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>Western Engineering Mars Rover Team (WE MARS)</h3>
+            <span class="role">Software & Mechanical Team Member</span>
+            <span class="date"><i class="far fa-calendar-alt"></i> Sept 2024 - Apr 2025</span>
+            <ul>
+                [cite_start]<li><strong>Servo Assembly:</strong> Designed (CAD), simulated, and validated a custom servo assembly for the planetary rover chassis[cite: 133].</li>
+                [cite_start]<li><strong>Radio Comms:</strong> Programmed radio communication systems using <strong>C++</strong> for extended-range, low-latency control[cite: 134].</li>
+                [cite_start]<li><strong>Integration:</strong> Collaborated with multidisciplinary teams to address electromechanical constraints[cite: 131].</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tag">C++</span>
+                <span class="tag">SolidWorks</span>
+                <span class="tag">Radio Systems</span>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

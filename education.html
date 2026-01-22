@@ -2,46 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education | Jaemin Cho</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav>
-        <div class="logo">Jaemin Cho</div>
+        <div class="logo">Jaemin <span>Cho</span></div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="experience.html">Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
         </ul>
     </nav>
 
-    <section>
-        <h1>Education</h1>
-        <div class="card">
-            <h2>University of Western Ontario</h2>
-            <p><strong>Dual Degree:</strong> Bachelor of Engineering Science</p>
-            <ul>
-                <li>Mechatronic Systems Engineering</li>
-                <li>Artificial Intelligence Systems Engineering</li>
-            </ul>
-            <p><strong>Expected Graduation:</strong> 2027</p>
+    <header style="padding: 60px 20px;">
+        <h1>Education & Academics</h1>
+        <p class="subtitle">Transcript Highlights & Awards</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card" style="margin-bottom: 30px; border-left: 5px solid var(--success);">
+            <h3>University of Western Ontario</h3>
+            <span class="role">Bachelor of Engineering Science (BESc)</span>
+            <span class="date">Sept 2022 - Apr 2027 (Expected)</span>
+            [cite_start]<p><strong>Dual Degree:</strong> Mechatronic Systems Engineering & Artificial Intelligence Systems Engineering[cite: 85, 153].</p>
+            
+            <div style="margin-top: 15px;">
+                <strong style="color: var(--success);"><i class="fas fa-award"></i> Awards:</strong>
+                <ul style="margin-top: 5px;">
+                    [cite_start]<li>Dean's Honour List (2024-2025) [cite: 46]</li>
+                    [cite_start]<li>Dean's Honour List (2023-2024) [cite: 29]</li>
+                    [cite_start]<li>Dean's Honour List (2022-2023) [cite: 21]</li>
+                    [cite_start]<li>International Learning Award [cite: 82]</li>
+                </ul>
+            </div>
         </div>
 
-        <h2>Academic Achievements</h2>
-        <div class="card">
-            <h3>Dean's Honor List</h3>
-            <p>Awarded for maintaining an average of 80%+ with a full course load.</p>
-            <ul>
-                <li>2024-2025 Academic Year</li>
-                <li>2023-2024 Academic Year</li>
-                <li>2022-2023 Academic Year</li>
-            </ul>
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>Seoul National University</h3>
+            <span class="role">International Summer Program</span>
+            <span class="date">June 2024 - July 2024</span>
+            [cite_start]<p>Coursework: First Steps in Programming a Humanoid AI Robot[cite: 85, 154].</p>
         </div>
 
-        <h2>Key Coursework & Performance</h2>
         <div class="card">
+            <h3><i class="fas fa-chart-line"></i> Top Course Performance</h3>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Selected grades from official transcript.</p>
             <table>
                 <tr>
                     <th>Course</th>
@@ -49,34 +59,31 @@
                 </tr>
                 <tr>
                     <td>Electric Motors and Drives</td>
-                    <td>95%</td>
+                    <td style="color: var(--success); font-weight: bold;">95%</td>
                 </tr>
                 <tr>
-                    <td>Physics for Engineering Students I</td>
-                    <td>93%</td>
+                    <td>Physics for Eng. Students I</td>
+                    <td style="color: var(--success); font-weight: bold;">93%</td>
                 </tr>
-                <tr>
+                 <tr>
                     <td>Software Design for Systems Eng.</td>
-                    <td>93%</td>
+                    <td style="color: var(--success); font-weight: bold;">93%</td>
                 </tr>
                 <tr>
                     <td>Control Systems</td>
-                    <td>92%</td>
+                    <td style="color: var(--accent-color); font-weight: bold;">92%</td>
                 </tr>
                 <tr>
-                    <td>Applied Math for Elec/Mech Eng III</td>
-                    <td>92%</td>
-                </tr>
-                <tr>
-                    <td>Adv. Applied Math for Elec Eng</td>
-                    <td>91%</td>
+                    <td>App. Math for Elec & Mech Eng</td>
+                    <td style="color: var(--accent-color); font-weight: bold;">92%</td>
                 </tr>
                 <tr>
                     <td>Kinetics & Dynamics of Machines</td>
-                    <td>90%</td>
+                    <td style="color: var(--accent-color); font-weight: bold;">90%</td>
                 </tr>
             </table>
         </div>
-    </section>
+
+    </div>
 </body>
 </html>
