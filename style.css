@@ -63,3 +63,16 @@ img, video {
     max-width: 100%;
     border-radius: 4px;
 }
+
+.view-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
