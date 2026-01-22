@@ -30,18 +30,20 @@ body {
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    z-index: 100; /* Keeps it on top */
+    z-index: 100;
 }
 
 .profile-section { text-align: center; margin-bottom: 40px; }
 
+/* FIXED DIMENSIONS TO PREVENT JUMPING */
 .profile-img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     border: 2px solid var(--border);
+    display: block;
 }
 
 .sidebar h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; color: var(--text-primary); }
@@ -52,7 +54,8 @@ body {
 .nav-links a {
     display: flex; align-items: center; padding: 12px 15px;
     color: var(--text-secondary); text-decoration: none; border-radius: 6px;
-    transition: all 0.2s; font-size: 0.95rem; font-weight: 500;
+    transition: background 0.1s ease-in-out; 
+    font-size: 0.95rem; font-weight: 500;
 }
 .nav-links a:hover, .nav-links a.active {
     background: var(--card-bg); color: var(--text-primary); border-left: 3px solid var(--accent);
@@ -77,10 +80,10 @@ body {
 h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin: 50px 0 30px 0; }
 h2:first-child { margin-top: 0; }
 
-/* --- TIMELINE LISTS (For Hub Pages) --- */
+/* --- TIMELINE LISTS --- */
 .timeline-item {
     position: relative; padding-left: 30px; margin-bottom: 30px;
-    text-decoration: none; display: block; /* Make whole card clickable */
+    text-decoration: none; display: block;
 }
 .timeline-item::before {
     content: ""; position: absolute; left: 0; top: 10px; bottom: -40px; width: 2px; background: var(--border);
@@ -122,7 +125,6 @@ h2:first-child { margin-top: 0; }
     text-align: center; border-radius: 6px; font-size: 0.9rem; font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     body { flex-direction: column; }
     .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
