@@ -7,63 +7,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="sidebar">
         <div class="profile-section">
             <img src="profile.jpg" alt="Jaemin Cho" class="profile-img">
             <h1>Jaemin Cho</h1>
-            <a href="resume.pdf" class="btn-primary"><i class="fas fa-download"></i> Resume</a>
+            <p class="subtitle">Mechatronics & AI Engineering<br>Western University '27</p>
+            <a href="resume.pdf" target="_blank" class="btn-primary"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+            <li><a href="education.html" class="active"><i class="fas fa-graduation-cap"></i> Education</a></li>
         </ul>
+        <div class="social-links">
+            <a href="https://github.com/jaemin-cho04" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jaemin-cho-854112272/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:justin_cho@icloud.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </aside>
 
     <main class="main-content">
         <h2>Academic Background</h2>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>University of Western Ontario</h3>
-                <span class="date">Class of 2027</span>
-            </div>
-            <span class="role">Bachelor of Engineering Science (Dual Degree)</span>
-            <ul style="margin-left: 20px; color: #444;">
+        <div class="list-card">
+            <div class="list-header"><h3>University of Western Ontario</h3><span class="date">Class of 2027</span></div>
+            <p class="description">Dual Degree: Bachelor of Engineering Science</p>
+            <ul style="margin-left:20px; color:#a1a1aa; margin-top:10px;">
                 <li>Mechatronic Systems Engineering</li>
                 <li>Artificial Intelligence Systems Engineering</li>
             </ul>
         </div>
 
-        <h2>Awards & Honors</h2>
-        <div class="list-item">
+        <h2>Awards</h2>
+        <div class="list-card">
             <ul>
-                [cite_start]<li><strong>Dean's Honour List</strong> (2024-2025) [cite: 31, 103]</li>
-                [cite_start]<li><strong>Dean's Honour List</strong> (2023-2024) [cite: 22, 106]</li>
-                [cite_start]<li><strong>Dean's Honour List</strong> (2022-2023) [cite: 21]</li>
-                [cite_start]<li>International Learning Award [cite: 82]</li>
-                [cite_start]<li>Western Admission Scholarship [cite: 78]</li>
+                [cite_start]<li>Dean's Honour List (2024-2025) [cite: 103]</li>
+                [cite_start]<li>Dean's Honour List (2023-2024) [cite: 22]</li>
+                [cite_start]<li>Dean's Honour List (2022-2023) [cite: 106]</li>
             </ul>
         </div>
 
-        <h2>Top Coursework</h2>
-        <div class="list-item">
-            <table style="width: 100%; border-collapse: collapse;">
-                <tr style="border-bottom: 2px solid #ddd;">
-                    <th style="text-align: left; padding: 10px;">Course</th>
-                    <th style="text-align: right; padding: 10px;">Grade</th>
-                </tr>
-                <tr><td style="padding: 10px;">Electric Motors and Drives</td><td style="text-align: right; padding: 10px;">95%</td></tr>
-                <tr><td style="padding: 10px;">Physics for Eng. Students I</td><td style="text-align: right; padding: 10px;">93%</td></tr>
-                <tr><td style="padding: 10px;">Software Design for Sys Eng</td><td style="text-align: right; padding: 10px;">93%</td></tr>
-                <tr><td style="padding: 10px;">Control Systems</td><td style="text-align: right; padding: 10px;">92%</td></tr>
-                <tr><td style="padding: 10px;">Applied Math (Elec & Mech)</td><td style="text-align: right; padding: 10px;">92%</td></tr>
+        <h2>Top Grades</h2>
+        <div class="list-card">
+            <table style="width:100%; text-align:left; color:#a1a1aa;">
+                <tr><th style="padding:5px;">Course</th><th>Grade</th></tr>
+                <tr><td style="padding:5px;">Electric Motors and Drives</td><td>95%</td></tr>
+                <tr><td style="padding:5px;">Physics for Eng. Students I</td><td>93%</td></tr>
+                <tr><td style="padding:5px;">Control Systems</td><td>92%</td></tr>
             </table>
-            [cite_start]<p style="font-size: 0.8rem; color: #666; margin-top: 10px;">*Grades sourced from unofficial transcript [cite: 72, 17, 28]</p>
         </div>
-
     </main>
 </body>
 </html>

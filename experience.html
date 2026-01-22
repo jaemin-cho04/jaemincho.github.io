@@ -7,58 +7,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="sidebar">
         <div class="profile-section">
             <img src="profile.jpg" alt="Jaemin Cho" class="profile-img">
             <h1>Jaemin Cho</h1>
-            <a href="resume.pdf" class="btn-primary"><i class="fas fa-download"></i> Resume</a>
+            <p class="subtitle">Mechatronics & AI Engineering<br>Western University '27</p>
+            <a href="resume.pdf" target="_blank" class="btn-primary"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="experience.html" class="active">Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a href="experience.html" class="active"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
         </ul>
+        <div class="social-links">
+            <a href="https://github.com/jaemin-cho04" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jaemin-cho-854112272/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:justin_cho@icloud.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </aside>
 
     <main class="main-content">
-        <h2>Professional Experience</h2>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>NAV CANADA</h3>
-                <span class="date">Ottawa, ON | May 2025 - Aug 2025</span>
+        <h2>Professional Work</h2>
+        <a href="work-nav-canada.html" class="timeline-item">
+            <div class="list-card">
+                <div class="list-header"><h3>NAV CANADA</h3><span class="date">Ottawa | May 2025 - Aug 2025</span></div>
+                <p class="description">Communications Engineering Co-op. Built radio emulators and 24V level-shifting circuits.</p>
+                <div style="margin-top:10px; font-size:0.8rem; color:#d4d4d8;">Read Case Study &rarr;</div>
             </div>
-            <span class="role">Communications Engineering Co-op Student</span>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                [cite_start]<li>Designed and built a high-frequency radio transmitter emulator using <strong>Raspberry Pi and Python</strong>. [cite: 120]</li>
-                [cite_start]<li>Engineered transistor-based level shifting circuits with <strong>2N3904 BJTs</strong> to convert 3.3V signals to 24V. [cite: 122]</li>
-                [cite_start]<li>Developed fault detection and timing control systems utilizing oscilloscopes. [cite: 124]</li>
-                [cite_start]<li>Authored technical reports for SR&ED documentation readiness. [cite: 125]</li>
-            </ul>
-        </div>
+        </a>
 
         <h2>Leadership & Clubs</h2>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>Western Skylark CubeSat</h3>
-                <span class="date">Dec 2025 - Present</span>
+        <a href="club-cubesat.html" class="timeline-item">
+            <div class="list-card">
+                <div class="list-header"><h3>Western Skylark CubeSat</h3><span class="date">Dec 2025 - Present</span></div>
+                <p class="description">Remote Stations Team Member. Developing satellite ground station infrastructure.</p>
+                <div style="margin-top:10px; font-size:0.8rem; color:#d4d4d8;">View Details &rarr;</div>
             </div>
-            <span class="role">Remote Stations Team Member</span>
-            [cite_start]<p class="description">Collaborating on remote station setups for satellite tracking. [cite: 115]</p>
-        </div>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>Western Engineering Mars Rover Team</h3>
-                <span class="date">Sept 2024 - Apr 2025</span>
-            </div>
-            <span class="role">Software & Mechanical Team Member</span>
-            [cite_start]<p class="description">Designed custom servo assembly in SolidWorks and programmed radio communication systems in C++ for low-latency control. [cite: 133, 134]</p>
-        </div>
-
+        </a>
     </main>
 </body>
 </html>

@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaemin Cho | Engineering</title>
+    <title>Jaemin Cho | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="sidebar">
-        <div>
-            <div class="profile-section">
-                <img src="profile.jpg" alt="Jaemin Cho" class="profile-img">
-                <h1>Jaemin Cho</h1>
-                <p class="subtitle">Mechatronic & AI Systems Engineering<br>Class of 2027</p>
-                
-                <a href="resume.pdf" target="_blank" class="btn-primary">
-                    <i class="fas fa-file-alt"></i> Resume
-                </a>
-            </div>
-
-            <ul class="nav-links" style="margin-top: 40px;">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Overview</a></li>
-                <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
-                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            </ul>
+        <div class="profile-section">
+            <img src="profile.jpg" alt="Jaemin Cho" class="profile-img">
+            <h1>Jaemin Cho</h1>
+            <p class="subtitle">Mechatronics & AI Engineering<br>Western University '27</p>
+            <a href="resume.pdf" target="_blank" class="btn-primary"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
-
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        </ul>
         <div class="social-links">
             <a href="https://github.com/jaemin-cho04" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/jaemin-cho-854112272/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -37,62 +29,31 @@
     </aside>
 
     <main class="main-content">
-        
         <section>
             <h2>About Me</h2>
-            <div class="list-card" style="border-left: 4px solid var(--text-primary);">
-                <p class="description" style="margin-bottom: 0;">
-                    I am a dual-degree Engineering student at Western University, bridging the gap between <strong>hardware precision</strong> and <strong>artificial intelligence</strong>. 
-                    I have maintained a spot on the <strong>Dean's Honour List</strong> for three consecutive years (2023-2025). 
-                    Currently, I am developing remote station infrastructure for the <strong>Western Skylark CubeSat</strong>.
+            <div class="list-card" style="border-left: 4px solid #f4f4f5;">
+                <p class="description" style="color: #e4e4e7;">
+                    I am a dual-degree Engineering student bridging the gap between <strong>hardware precision</strong> and <strong>artificial intelligence</strong>. 
+                    [cite_start]I have maintained a spot on the <strong>Dean's Honour List</strong> for three consecutive years (2023-2025)[cite: 103, 106].
+                    [cite_start]Currently, I am developing remote station infrastructure for the <strong>Western Skylark CubeSat</strong>[cite: 115].
                 </p>
             </div>
         </section>
 
         <section>
-            <h2>Latest Highlights</h2>
-
-            <div class="timeline-item">
+            <h2>Latest Activity</h2>
+            <a href="work-nav-canada.html" class="timeline-item">
                 <div class="list-card">
-                    <div class="list-header">
-                        <h3>NAV CANADA</h3>
-                        <span class="date">May 2025</span>
-                    </div>
-                    <span class="role">Communications Engineering Co-op</span>
-                    <p class="description">Designed radio transmitter emulators using Raspberry Pi and Python. Engineered 2N3904 BJT circuits for industrial I/O.</p>
-                    <div class="tags">
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Python</span>
-                    </div>
+                    <div class="list-header"><h3>NAV CANADA</h3><span class="date">May 2025</span></div>
+                    <p class="description">Designed radio transmitter emulators using Raspberry Pi & Python.</p>
                 </div>
-            </div>
-
-            <div class="timeline-item">
+            </a>
+            <a href="project-gem-robot.html" class="timeline-item">
                 <div class="list-card">
-                    <div class="list-header">
-                        <h3>Autonomous Gem Robot</h3>
-                        <span class="date">Jan 2025</span>
-                    </div>
-                    <span class="role">Project: Mechatronics Design</span>
-                    <p class="description">Full chassis design in SolidWorks with ESP32 C++ firmware for real-time color detection.</p>
-                    <div class="tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">SolidWorks</span>
-                    </div>
+                    <div class="list-header"><h3>Gem-Sorting Robot</h3><span class="date">Jan 2025</span></div>
+                    <p class="description">Autonomous robot design with ESP32 firmware and SolidWorks chassis.</p>
                 </div>
-            </div>
-
-             <div class="timeline-item">
-                <div class="list-card">
-                    <div class="list-header">
-                        <h3>Western Skylark CubeSat</h3>
-                        <span class="date">Dec 2025</span>
-                    </div>
-                    <span class="role">Remote Stations Team</span>
-                    <p class="description">Developing ground station infrastructure for satellite operations.</p>
-                </div>
-            </div>
-
+            </a>
         </section>
     </main>
 </body>

@@ -7,57 +7,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="sidebar">
         <div class="profile-section">
             <img src="profile.jpg" alt="Jaemin Cho" class="profile-img">
             <h1>Jaemin Cho</h1>
-            <a href="resume.pdf" class="btn-primary"><i class="fas fa-download"></i> Resume</a>
+            <p class="subtitle">Mechatronics & AI Engineering<br>Western University '27</p>
+            <a href="resume.pdf" target="_blank" class="btn-primary"><i class="fas fa-file-alt"></i> Resume</a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="projects.html" class="active"><i class="fas fa-code-branch"></i> Projects</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
         </ul>
+        <div class="social-links">
+            <a href="https://github.com/jaemin-cho04" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jaemin-cho-854112272/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:justin_cho@icloud.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </aside>
 
     <main class="main-content">
         <h2>Engineering Projects</h2>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>Autonomous Gem-Sorting Robot</h3>
-                <span class="date">Jan 2025 - Apr 2025</span>
+        
+        <a href="project-gem-robot.html" class="timeline-item">
+            <div class="list-card">
+                <div class="list-header"><h3>Autonomous Gem-Sorting Robot</h3><span class="date">Jan 2025 - Apr 2025</span></div>
+                <p class="description">Mechatronics Design. Full chassis design in SolidWorks with C++ firmware on ESP32.</p>
+                <div style="margin-top:10px; font-size:0.8rem; color:#d4d4d8;">View Schematics & Code &rarr;</div>
             </div>
-            <p class="description">
-                <strong>Tech:</strong> C++, ESP32, SolidWorks<br>
-                Programmed C++ firmware on ESP32 to control gem detection via TCS34725 color sensor and actuate a servo-driven sortation mechanism. [cite_start]Designed the chassis and Pac-Man style sortation wheel in SolidWorks. [cite: 85]
-            </p>
-        </div>
+        </a>
 
-        <div class="list-item">
-            <div class="list-header">
-                <h3>Humanoid AI Robot (Tic-Tac-Toe)</h3>
-                <span class="date">Summer 2024</span>
+        <a href="project-mars-rover.html" class="timeline-item">
+            <div class="list-card">
+                <div class="list-header"><h3>Mars Rover Servo & Radio</h3><span class="date">Sept 2024 - Apr 2025</span></div>
+                <p class="description">Designed custom servo assembly and low-latency radio comms for the WE MARS team.</p>
+                <div style="margin-top:10px; font-size:0.8rem; color:#d4d4d8;">View Design &rarr;</div>
             </div>
-            <p class="description">
-                <strong>Tech:</strong> ROS, OpenCV, Python<br>
-                [cite_start]Built a vision-based game-playing robot using OpenCV for color segmentation and grid recognition, and ROS for handling game logic and interaction timing. [cite: 85]
-            </p>
-        </div>
-
-        <div class="list-item">
-            <div class="list-header">
-                <h3>Air Quality Time-Series Forecasting</h3>
-                <span class="date">Sept 2024 - Dec 2024</span>
-            </div>
-            <p class="description">
-                <strong>Tech:</strong> Scikit-learn, Pandas, Python<br>
-                [cite_start]Developed a Python-based ML pipeline for time-series forecasting, applying structured data preparation and feature engineering. [cite: 85]
-            </p>
-        </div>
-
+        </a>
     </main>
 </body>
 </html>
