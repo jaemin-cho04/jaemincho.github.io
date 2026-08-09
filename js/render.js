@@ -1,4 +1,4 @@
-import { profile } from "../data/profile.js";
+import { profile } from "../data/profile.js?v=20260809-2";
 import { experiences } from "../data/experience.js";
 import { capabilities } from "../data/skills.js";
 import { education } from "../data/education.js";

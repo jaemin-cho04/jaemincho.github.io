@@ -1,4 +1,4 @@
-import { renderProfile, renderProjects, renderExperience, renderCapabilities, renderEducation } from "./render.js";
+import { renderProfile, renderProjects, renderExperience, renderCapabilities, renderEducation } from "./render.js?v=20260809-2";
 
 renderProfile();
 renderProjects();
