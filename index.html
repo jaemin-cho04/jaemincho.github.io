@@ -1,139 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaemin Cho | Mechatronics & AI Engineering</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho is a Mechatronics and AI Systems Engineering student building reliable software for robotics, RF systems, and real hardware.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:title" content="Jaemin Cho — Mechatronics & AI Engineer">
+  <meta property="og:description" content="Embedded systems, test automation, robotics, and applied AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaemincho.github.io">
+  <title>Jaemin Cho — Mechatronics & AI Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0f14'/%3E%3Ctext x='32' y='39' fill='%23c8f53b' text-anchor='middle' font-family='monospace' font-size='22'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <div class="bg-grid"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- ── Navigation ──────────────────────────────────────── -->
-    <header>
-        <nav class="container">
-            <div class="logo">JAEMIN_CHO</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- ── Hero — content injected by render.js / data/profile.js ── -->
-        <section class="hero" id="about">
-            <div class="container"></div>
-        </section>
-
-        <!-- ── Skills — cards injected by render.js / data/skills.js ── -->
-        <section class="section" id="skills">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Expertise</div>
-                    <h2 class="section-title">Technical Skills</h2>
-                    <p class="section-description">
-                        Full-stack engineering capabilities spanning robotics, AI, and intelligent systems
-                    </p>
-                </div>
-                <div class="skills-grid"></div>
-            </div>
-        </section>
-
-        <!-- ── Experience — timeline injected by render.js / data/experience.js ── -->
-        <section class="section" id="experience">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Career</div>
-                    <h2 class="section-title">Work Experience</h2>
-                    <p class="section-description">
-                        Professional experience in robotics, automation, and intelligent systems
-                    </p>
-                </div>
-                <div class="timeline"></div>
-            </div>
-        </section>
-
-        <!-- ── Projects — cards injected by render.js / data/projects.js ── -->
-        <section class="section" id="projects">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Portfolio</div>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-description">
-                        Showcasing engineering work at the intersection of robotics and artificial intelligence
-                    </p>
-                </div>
-                <div class="projects-grid"></div>
-            </div>
-        </section>
-
-        <!-- ── Contact ─────────────────────────────────────────────────── -->
-        <!-- Contact info cards injected by render.js / data/profile.js   -->
-        <!-- Contact form stays here — it's structure, not data            -->
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Connect</div>
-                    <h2 class="section-title">Let's Build Something</h2>
-                    <p class="section-description">
-                        Open to collaborations, co-op opportunities, and innovative projects
-                    </p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info"></div>
-                    <div class="contact-form">
-                        <div class="form-group">
-                            <label for="contact-name">Name</label>
-                            <input id="contact-name" type="text" placeholder="Your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email">Email</label>
-                            <input id="contact-email" type="email" placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message">Message</label>
-                            <textarea id="contact-message" placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        <button class="btn btn-primary">Send Message</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ── Footer — links injected by render.js / data/profile.js ── -->
-    <footer>
-        <div class="container">
-            <div class="social-links"></div>
-            <p></p>
+  <header class="site-header" data-header>
+    <div class="shell nav-wrap">
+      <a class="wordmark" href="#top" aria-label="Jaemin Cho, home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#experience">Experience</a>
+          <a href="#work">Projects</a>
+          <a href="#capabilities">Capabilities</a>
+          <a class="nav-cta" href="#contact">Contact <span aria-hidden="true">↗</span></a>
         </div>
-    </footer>
+      </nav>
+    </div>
+  </header>
 
-    <!--
-        Script load order matters:
-        1. data files define globals (PROFILE, SKILLS, EXPERIENCE, PROJECTS)
-        2. render.js reads those globals and builds all section content
-        3. main.js wires up nav toggle and scroll observer
-    -->
-    <script src="data/profile.js"></script>
-    <script src="data/skills.js"></script>
-    <script src="data/experience.js"></script>
-    <script src="data/projects.js"></script>
-    <script src="js/render.js"></script>
-    <script src="js/main.js"></script>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Open to 2027 new-grad opportunities</p>
+          <h1 id="hero-title">I build software that <em>meets the real world.</em></h1>
+          <p class="hero-lede" data-profile-bio></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">View professional experience <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="mailto:justin_cho@icloud.com">justin_cho@icloud.com <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta" data-hero-meta></div>
+        </div>
+
+        <div class="hero-system reveal" aria-label="Areas of engineering focus">
+          <div class="system-topline"><span>System profile</span><span>JC / 2026</span></div>
+          <div class="orbit" aria-hidden="true">
+            <span class="orbit-ring orbit-ring-one"></span>
+            <span class="orbit-ring orbit-ring-two"></span>
+            <span class="orbit-core">JC</span>
+            <span class="orbit-node node-one"></span>
+            <span class="orbit-node node-two"></span>
+            <span class="orbit-node node-three"></span>
+          </div>
+          <div class="system-readouts">
+            <div><span>01</span><strong>Embedded</strong><small>Hardware control</small></div>
+            <div><span>02</span><strong>Test</strong><small>System validation</small></div>
+            <div><span>03</span><strong>Applied AI</strong><small>Intelligent systems</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Professional highlights">
+      <div class="shell proof-grid" data-proof-points></div>
+    </section>
+
+    <section class="section section-contrast" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Professional experience</p>
+            <h2 id="experience-title">Trusted with systems that matter.</h2>
+          </div>
+          <p>From radio astronomy instrumentation to aviation communications, I work carefully at the boundary between code and hardware.</p>
+        </div>
+        <div class="experience-list" data-experience></div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Selected projects</p>
+            <h2 id="work-title">Robotics, embedded systems, and applied ML.</h2>
+          </div>
+          <p>Each case study shows what was built, how the system worked, and what testing or results actually proved.</p>
+        </div>
+        <div class="featured-projects" data-featured-projects></div>
+
+        <div class="archive-heading reveal">
+          <div>
+            <p class="eyebrow">Project archive</p>
+            <h3>Additional projects</h3>
+          </div>
+          <div class="filter-group" data-project-filters aria-label="Filter projects"></div>
+        </div>
+        <div class="project-archive" data-project-archive></div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="shell capabilities-layout">
+        <div class="capabilities-intro reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="capabilities-title">A systems mindset, across the stack.</h2>
+          <p>I’m most effective where software, electronics, sensing, and physical behaviour have to work as one system.</p>
+        </div>
+        <div class="capability-grid" data-capabilities></div>
+      </div>
+    </section>
+
+    <section class="section education-section" aria-labelledby="education-title">
+      <div class="shell">
+        <div class="section-heading compact reveal">
+          <div>
+            <p class="eyebrow">Education & teams</p>
+            <h2 id="education-title">Learning beyond the classroom.</h2>
+          </div>
+        </div>
+        <div class="education-grid" data-education></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid reveal">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2 id="contact-title">Building something ambitious?</h2>
+          <p>I’m interested in new-grad roles across embedded software, robotics, test automation, controls, and applied AI.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:justin_cho@icloud.com">Start a conversation <span aria-hidden="true">↗</span></a>
+          <div class="contact-links" data-contact-links></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <p>Designed for the work ahead.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

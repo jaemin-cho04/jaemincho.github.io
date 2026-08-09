@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's embedded systems case study for a DE10 Smart Focus Dock prototype built with C, memory-mapped I/O, and finite-state control.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Smart Focus Dock - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page focus-dock-page" data-project="smart-focus-dock">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">ECE 3375 · Microprocessors &amp; Microcomputers</p>
+        <h1>Smart Focus Dock</h1>
+        <p class="case-lede">A lab-tested embedded prototype that turns phone placement into a timed focus session, detects early removal, and communicates progress through direct board-level I/O.</p>
+        <p class="case-result-line"><span>Verified result</span><strong>Lab-tested state transitions, timer progression, early-removal detection, completion feedback, and reset handling on the DE10 prototype.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Context</dt><dd>Academic team project</dd></div>
+          <div><dt>Team</dt><dd>Three students</dd></div>
+          <div><dt>Prototype</dt><dd>Lab tested</dd></div>
+          <div><dt>Tools</dt><dd>C, DE10-Standard, ARMv7, CPUlator, memory-mapped I/O</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Start a focus timer when a phone is placed on a dock and detect if it is removed early.</h2></article>
+          <article><span>What we built</span><p>A DE10 prototype written in C. Board switches represented phone presence and reset; two seven-segment displays showed the current state and progress step.</p></article>
+          <article><span>Result</span><p>The lab prototype completed timed sessions, detected interruptions, displayed both outcomes, and allowed reset during active feedback sequences.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="dock-flow-heading">
+          <div class="project-section-heading">
+            <div><span>System</span><h2 id="dock-flow-heading">Four prototype states</h2></div>
+            <p>The program read two memory-mapped inputs and used a finite-state machine to decide what the seven-segment displays should show.</p>
+          </div>
+          <div class="project-system-panel">
+            <div class="dock-display" aria-label="Seven-segment display showing active state and progress step four"><span class="dock-display-label">HEX1 / State</span><strong>P</strong><span class="dock-display-label">HEX0 / Progress</span><strong>4</strong><small>Focus active</small></div>
+            <ol class="dock-state-list"><li><span>01</span><strong>Idle</strong><p>Wait for phone input.</p></li><li><span>02</span><strong>Active</strong><p>Advance four timer steps.</p></li><li><span>03A</span><strong>Complete</strong><p>Flash C4 when time finishes.</p></li><li><span>03B</span><strong>Interrupted</strong><p>Flash E0 after early removal.</p></li></ol>
+          </div>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="dock-engineering-heading">
+          <div class="project-section-heading">
+            <div><span>How it worked</span><h2 id="dock-engineering-heading">Hardware access and control logic</h2></div>
+            <p>The implementation used direct register access for board I/O and kept the state transitions separate from display formatting.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="dock-validation-heading">
+          <div class="project-section-heading"><div><span>Evidence</span><h2 id="dock-validation-heading">Tested prototype versus proposed design</h2></div></div>
+          <div class="project-validation-grid">
+            <article><h3>Tested on the DE10</h3><ul><li>Idle, active, complete, and interrupted transitions</li><li>Four visible timer-progress steps</li><li>Early phone-removal detection</li><li>Reset handling during active and flashing states</li></ul></article>
+            <article><h3>Not physically tested</h3><p>The STM32 version specified an IR sensor, duration buttons, GPIO interrupts, a hardware timer, and OLED output, but it remained a code-level proposal. The DE10 prototype also used polling and blocking software delays rather than production timing.</p></article>
+          </div>
+        </section>
+
+        <section class="project-context"><span>Team context</span><p>This was a collaborative three-person ECE 3375 project. Only the DE10 prototype should be described as implemented and tested.</p></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>

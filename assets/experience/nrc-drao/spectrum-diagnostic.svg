@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative normalized spectrum diagnostic</title>
+  <desc id="desc">Two generic spectrum traces rise from lower roll-off regions into a stable usable band before falling again.</desc>
+  <rect width="1100" height="520" fill="#101820"/>
+  <g stroke="#24323e" stroke-width="1">
+    <path d="M80 90h950M80 170h950M80 250h950M80 330h950M80 410h950"/>
+    <path d="M160 70v380M300 70v380M440 70v380M580 70v380M720 70v380M860 70v380M1000 70v380"/>
+  </g>
+  <rect x="285" y="70" width="580" height="380" fill="#c8f53b" opacity=".055"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="12">
+    <text x="80" y="42" fill="#8c99a4">ILLUSTRATIVE SPECTRUM DIAGNOSTIC / NORMALIZED</text>
+    <text x="365" y="100" fill="#c8f53b">USABLE BAND</text>
+    <text x="85" y="472" fill="#71808b">LOWER ROLL-OFF</text>
+    <text x="887" y="472" fill="#71808b">UPPER ROLL-OFF</text>
+    <text x="80" y="505" fill="#71808b">FREQUENCY CHANNEL →</text>
+  </g>
+  <path d="M80 396 C125 388 155 370 190 325 S245 215 290 190 C355 150 420 172 490 158 S620 165 690 151 S800 172 855 182 C905 193 930 260 965 322 S1010 390 1030 398" fill="none" stroke="#8bc5ff" stroke-width="4"/>
+  <path d="M80 420 C125 405 160 382 195 340 S250 230 295 205 C360 170 430 192 500 179 S620 188 700 172 S800 191 858 205 C907 218 940 280 970 341 S1010 411 1030 419" fill="none" stroke="#ff9d5c" stroke-width="3" opacity=".9"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="12">
+    <rect x="820" y="26" width="12" height="3" fill="#8bc5ff"/><text x="840" y="32" fill="#8c99a4">PRODUCT A</text>
+    <rect x="930" y="26" width="12" height="3" fill="#ff9d5c"/><text x="950" y="32" fill="#8c99a4">PRODUCT B</text>
+  </g>
+</svg>

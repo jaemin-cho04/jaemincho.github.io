@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 680" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified radio telescope test system flow</title>
+  <desc id="desc">A test client communicates with a control API, which coordinates receiver, motion, and backend systems. Telemetry and scientific data return for validation.</desc>
+  <rect width="720" height="680" fill="#0e151d"/>
+  <g stroke="#25313c" stroke-width="1">
+    <path d="M0 80h720M0 160h720M0 240h720M0 320h720M0 400h720M0 480h720M0 560h720M0 640h720"/>
+    <path d="M80 0v680M160 0v680M240 0v680M320 0v680M400 0v680M480 0v680M560 0v680M640 0v680"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace">
+    <text x="42" y="46" fill="#7f8b95" font-size="13">HARDWARE-INTEGRATION TEST LOOP</text>
+    <g fill="none" stroke="#c8f53b" stroke-width="2">
+      <rect x="55" y="105" width="220" height="92"/>
+      <rect x="445" y="105" width="220" height="92"/>
+      <path d="M275 151h170"/>
+      <path d="m433 143 12 8-12 8"/>
+    </g>
+    <text x="80" y="142" fill="#c8f53b" font-size="12">01 / TEST CLIENT</text>
+    <text x="80" y="169" fill="#fff" font-size="17">Python + pytest</text>
+    <text x="470" y="142" fill="#c8f53b" font-size="12">02 / CONTROL LAYER</text>
+    <text x="470" y="169" fill="#fff" font-size="17">Subsystem API</text>
+
+    <g fill="#111c26" stroke="#41505e">
+      <rect x="55" y="290" width="180" height="110"/>
+      <rect x="270" y="290" width="180" height="110"/>
+      <rect x="485" y="290" width="180" height="110"/>
+    </g>
+    <g fill="#8bc5ff" font-size="12">
+      <text x="78" y="325">RECEIVER</text>
+      <text x="293" y="325">MOTION</text>
+      <text x="508" y="325">BACKEND</text>
+    </g>
+    <g fill="#fff" font-size="15">
+      <text x="78" y="356">State + power</text>
+      <text x="78" y="379">telemetry</text>
+      <text x="293" y="356">Position +</text>
+      <text x="293" y="379">control state</text>
+      <text x="508" y="356">Recording +</text>
+      <text x="508" y="379">scientific data</text>
+    </g>
+    <g fill="none" stroke="#8bc5ff" stroke-width="2">
+      <path d="M555 197v48H145v45"/><path d="M360 245v45"/><path d="M575 245v45"/>
+    </g>
+    <g fill="none" stroke="#ff9d5c" stroke-width="2">
+      <path d="M145 400v105h430V400"/><path d="M360 400v105"/>
+      <path d="M360 505v55H165"/><path d="m177 552-12 8 12 8"/>
+    </g>
+    <rect x="55" y="560" width="610" height="74" fill="#111c26" stroke="#ff9d5c" stroke-width="2"/>
+    <text x="80" y="590" fill="#ff9d5c" font-size="12">03 / VALIDATION EVIDENCE</text>
+    <text x="80" y="615" fill="#fff" font-size="15">Telemetry · logs · state transitions · recorded artifacts · safe cleanup</text>
+  </g>
+</svg>

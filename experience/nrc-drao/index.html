@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's public engineering case study on hardware-integration testing for a radio telescope control system at NRC DRAO.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>NRC DRAO Co-op Case Study — Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0f14'/%3E%3Ctext x='32' y='39' fill='%23c8f53b' text-anchor='middle' font-family='monospace' font-size='22'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact" data-case-study="nrc-drao">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#experience"><span aria-hidden="true">←</span> All experience</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Co-op experience · Summer 2026</p>
+        <h1>Junior Telescope Engineer</h1>
+        <p class="case-lede">At NRC’s Dominion Radio Astrophysical Observatory, I worked on the John A. Galt Telescope—building Python tests that connected software commands to real telescope behaviour, from receiver hardware and motion control to recorded scientific data.</p>
+
+        <dl class="case-facts" aria-label="Role details">
+          <div><dt>Organization</dt><dd>National Research Council Canada</dd></div>
+          <div><dt>Term</dt><dd>May–August 2026</dd></div>
+          <div><dt>Location</dt><dd>Penticton, BC</dd></div>
+          <div><dt>Tools</dt><dd>Python, pytest, Linux, GitLab CI, Docker, HDF5</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap compact-case-content">
+        <section class="compact-overview" aria-labelledby="role-heading">
+          <div class="compact-overview-copy">
+            <p class="case-section-label">01 / Assignment</p>
+            <h2 id="role-heading">Test the physical result—not just the API response.</h2>
+            <p>The John A. Galt Telescope brings together mechanical drives, RF receiver equipment, digital signal processing, scientific data storage, and software services. I worked at the boundaries between those systems.</p>
+            <p>I developed Python and pytest integration tests that issued commands, observed live telemetry, verified physical state and scientific outputs, and returned equipment to a safe state after failures.</p>
+            <dl class="compact-proof" aria-label="Project scope">
+              <div><dt>Receiver</dt><dd>RF hardware state</dd></div>
+              <div><dt>Motion</dt><dd>Control telemetry</dd></div>
+              <div><dt>DAQ</dt><dd>Scientific outputs</dd></div>
+            </dl>
+          </div>
+          <figure class="compact-prototype compact-telescope">
+            <div class="compact-photo-pair">
+              <img src="../../assets/experience/nrc-drao/drao-observatory.jpg" width="825" height="690" alt="Aerial view of the Dominion Radio Astrophysical Observatory with the John A. Galt Telescope on the right" fetchpriority="high">
+              <img src="../../assets/experience/nrc-drao/john-a-galt-telescope.jpg" width="960" height="1452" alt="Full view of the John A. Galt 26-metre radio telescope" loading="lazy">
+            </div>
+            <figcaption><strong>John A. Galt Telescope</strong><span>Dominion Radio Astrophysical Observatory · Penticton, BC</span><a href="https://nrc.canada.ca/en/research-development/nrc-facilities/dominion-radio-astrophysical-observatory-research-facility" target="_blank" rel="noreferrer">About the facility ↗</a></figcaption>
+          </figure>
+        </section>
+
+        <section class="compact-contributions" aria-labelledby="contributions-heading">
+          <div class="compact-section-heading">
+            <p class="case-section-label">02 / Contributions</p>
+            <h2 id="contributions-heading">Three areas of ownership</h2>
+          </div>
+          <div class="workstream-list" data-contributions></div>
+        </section>
+
+        <section class="compact-outcome" aria-labelledby="result-heading">
+          <p class="case-section-label">03 / Takeaway</p>
+          <div>
+            <h2 id="result-heading">Clarity is a safety feature.</h2>
+            <p>I learned to use commands, telemetry, timestamps, coordinate transformations, logs, and recorded artifacts together—separating hardware behaviour from test, timing, network, configuration, and data-interpretation problems.</p>
+            <p class="disclosure"><strong>Public disclosure:</strong> This page excludes NRC source code, internal identifiers, credentials, operating limits, and non-public data.</p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#experience">Return to all experience <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/experience-detail.js"></script>
+</body>
+</html>

@@ -1,37 +1,42 @@
-/* ===================================
-   MOBILE NAVIGATION TOGGLE
-   =================================== */
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+import { renderProfile, renderProjects, renderExperience, renderCapabilities, renderEducation } from "./render.js";
 
-navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
+renderProfile();
+renderProjects();
+renderExperience();
+renderCapabilities();
+renderEducation();
+
+document.querySelector("[data-current-year]").textContent = new Date().getFullYear();
+
+const menuButton = document.querySelector(".menu-button");
+const navLinks = document.querySelector(".nav-links");
+
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.setAttribute("aria-expanded", String(!open));
+  navLinks.classList.toggle("open", !open);
 });
 
-// Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
+navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  menuButton.setAttribute("aria-expanded", "false");
+  navLinks.classList.remove("open");
+}));
+
+const header = document.querySelector("[data-header]");
+const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 24);
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
-});
-
-
-/* ===================================
-   ACTIVE NAV LINK ON SCROLL
-   =================================== */
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navAnchors.forEach(a => a.classList.remove('active'));
-            const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-            if (active) active.classList.add('active');
-        }
-    });
-}, { threshold: 0.4 });
-
-sections.forEach(s => observer.observe(s));
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+} else {
+  document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
+}

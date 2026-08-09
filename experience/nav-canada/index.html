@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's public engineering case study on an embedded HF radio-transmitter emulator developed at NAV CANADA.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>NAV CANADA Co-op Case Study - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0f14'/%3E%3Ctext x='32' y='39' fill='%23c8f53b' text-anchor='middle' font-family='monospace' font-size='22'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact" data-case-study="nav-canada">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#experience"><span aria-hidden="true">←</span> All experience</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Co-op experience · Summer 2025</p>
+        <h1>Communications Engineering</h1>
+        <p class="case-lede">At NAV CANADA, I designed and delivered a Raspberry Pi-based HF radio-transmitter emulator that allowed engineers to test control, timing, and fault scenarios without depending on the production transmitter.</p>
+
+        <dl class="case-facts" aria-label="Role details">
+          <div><dt>Organization</dt><dd>NAV CANADA</dd></div>
+          <div><dt>Term</dt><dd>May-August 2025</dd></div>
+          <div><dt>Location</dt><dd>Ottawa, ON</dd></div>
+          <div><dt>Tools</dt><dd>Python, Raspberry Pi, GPIO, MOXA I/O, oscilloscopes</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap compact-case-content">
+        <section class="compact-overview" aria-labelledby="role-heading">
+          <div class="compact-overview-copy">
+            <p class="case-section-label">01 / Assignment</p>
+            <h2 id="role-heading">Build a safe substitute for production hardware.</h2>
+            <p>The emulator reproduced the external control behaviour of an HF radio transmitter used in aviation communications testing. It combined embedded software, GPIO, relays, indicators, industrial 24 V I/O, and custom signal-conditioning circuits.</p>
+            <p>I owned the work from an initial requirements document through architecture, implementation, electrical integration, verification, and documentation.</p>
+            <dl class="compact-proof" aria-label="Project evidence">
+              <div><dt>100+</dt><dd>Automated tests</dd></div>
+              <div><dt>50+</dt><dd>System checks</dd></div>
+              <div><dt>3.3 → 24 V</dt><dd>Industrial interface</dd></div>
+            </dl>
+          </div>
+          <figure class="compact-prototype">
+            <img src="../../assets/experience/nav-canada/hf-emulator-prototype.jpg" width="1179" height="2096" alt="Development prototype of the Raspberry Pi-based HF radio-transmitter emulator, showing the controller, relay boards, indicators, and interface wiring" fetchpriority="high">
+            <figcaption><strong>HF transmitter emulator prototype</strong><span>Raspberry Pi control, signal conditioning, relays, indicators, and industrial I/O.</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="compact-contributions" aria-labelledby="contributions-heading">
+          <div class="compact-section-heading">
+            <p class="case-section-label">02 / Contributions</p>
+            <h2 id="contributions-heading">Three areas of ownership</h2>
+          </div>
+          <div class="workstream-list" data-contributions></div>
+        </section>
+
+        <section class="compact-outcome" aria-labelledby="result-heading">
+          <p class="case-section-label">03 / Outcome</p>
+          <div>
+            <h2 id="result-heading">A repeatable way to test across software and hardware.</h2>
+            <p>The completed emulator let engineers exercise transmitter-control scenarios while capturing the electrical, timing, software, and fault evidence needed for review.</p>
+            <p class="disclosure"><strong>Public disclosure:</strong> This page excludes source code, exact wiring and pin assignments, internal requirements, detailed timing limits, and non-public documentation.</p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#experience">Return to all experience <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/experience-detail.js"></script>
+</body>
+</html>

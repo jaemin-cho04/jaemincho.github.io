@@ -1,145 +1,122 @@
-// ============================================================
-//  RENDER.JS
-//  Reads the global data constants from data/*.js and builds
-//  all section content into the DOM. Each function targets one
-//  section. To debug a section, call its function in the console.
-// ============================================================
+import { profile } from "../data/profile.js";
+import { experiences } from "../data/experience.js";
+import { capabilities } from "../data/skills.js";
+import { education } from "../data/education.js";
+import { projects, projectCategories } from "../data/projects.js";
 
+const tags = (items) => items.map((item) => `<span>${item}</span>`).join("");
 
-// ── Hero ────────────────────────────────────────────────────
-function renderHero() {
-  document.querySelector('#about .container').innerHTML = `
-    <div class="hero-content">
-      <div>
-        <div class="hero-badge"><span>🤖</span> ${PROFILE.badge}</div>
-        <h1>
-          ${PROFILE.headline[0]}
-          <span class="gradient-text">${PROFILE.headline[1]}</span>
-        </h1>
-        <p class="hero-description">${PROFILE.bio}</p>
-        <div class="cta-buttons">
-          <a href="#projects" class="btn btn-primary">Explore Projects</a>
-          <a href="#contact"  class="btn btn-secondary">Let's Talk</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="floating-cards">
-          ${PROFILE.heroCards.map(c => `
-            <div class="float-card">
-              <div class="float-card-icon">${c.icon}</div>
-              <h3>${c.title}</h3>
-              <p>${c.text}</p>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </div>
+export function renderProfile() {
+  document.querySelector("[data-profile-bio]").textContent = profile.bio;
+  document.querySelector("[data-hero-meta]").innerHTML = `
+    <div><span>Currently</span><strong>Junior Telescope Engineer, NRC</strong></div>
+    <div><span>Based in</span><strong>${profile.location}</strong></div>
   `;
-}
-
-
-// ── Skills ──────────────────────────────────────────────────
-function renderSkills() {
-  document.querySelector('#skills .skills-grid').innerHTML = SKILLS.map(s => `
-    <div class="skill-category">
-      <h3><span class="skill-icon">${s.icon}</span> ${s.category}</h3>
-      <div class="skill-list">
-        ${s.tags.map(t => `<span class="skill-tag">${t}</span>`).join('')}
-      </div>
+  document.querySelector("[data-proof-points]").innerHTML = profile.proofPoints.map((point) => `
+    <div class="proof-item reveal">
+      <strong>${point.value}</strong>
+      <span>${point.label}</span>
     </div>
-  `).join('');
+  `).join("");
+  document.querySelector("[data-contact-links]").innerHTML = profile.links.map((link) => `
+    <a href="${link.url}" target="_blank" rel="noreferrer">${link.label} <span aria-hidden="true">↗</span></a>
+  `).join("");
 }
 
+export function renderProjects() {
+  const featured = projects.filter((project) => project.featured);
+  const archive = projects.filter((project) => !project.featured);
 
-// ── Experience ──────────────────────────────────────────────
-function renderExperience() {
-  document.querySelector('#experience .timeline').innerHTML = EXPERIENCE.map(e => `
-    <div class="timeline-item">
-      <div class="experience-title">${e.title}</div>
-      <div class="experience-company">${e.company}</div>
-      <div class="experience-date">${e.date}</div>
-      <p class="experience-description">${e.description}</p>
-      <ul class="experience-highlights">
-        ${e.highlights.map(h => `<li>${h}</li>`).join('')}
-      </ul>
-      <div class="tech-badges">
-        ${e.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}
+  document.querySelector("[data-featured-projects]").innerHTML = featured.map((project) => `
+    <article class="featured-card tone-${project.tone} reveal">
+      <div class="featured-content">
+        <div class="project-topline"><span>${project.eyebrow}</span><span>${project.period}</span></div>
+        <span class="featured-number" aria-hidden="true">${project.number}</span>
+        <h3>${project.title}</h3>
+        <p class="featured-summary">${project.summary}</p>
+        <p class="project-result"><span>Result</span><strong>${project.result}</strong></p>
+        <div class="tag-list">${tags(project.tags)}</div>
+        ${project.caseStudy
+          ? `<a class="project-link" href="${project.caseStudy}">${project.linkLabel} <span aria-hidden="true">→</span></a>`
+          : project.link
+            ? `<a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel} <span aria-hidden="true">↗</span></a>`
+            : `<span class="project-note">Case study media coming soon</span>`}
       </div>
-    </div>
-  `).join('');
+    </article>
+  `).join("");
+
+  document.querySelector("[data-project-filters]").innerHTML = projectCategories.map((category, index) => `
+    <button type="button" class="filter-button${index === 0 ? " active" : ""}" data-filter="${category}" aria-pressed="${index === 0}">${category}</button>
+  `).join("");
+
+  const archiveElement = document.querySelector("[data-project-archive]");
+  const drawArchive = (filter = "All") => {
+    const visible = filter === "All" ? archive : archive.filter((project) => project.category === filter);
+    archiveElement.innerHTML = visible.map((project) => `
+      <article class="archive-card">
+        <div class="archive-meta"><span>${project.category}</span><span>${project.period}</span></div>
+        <h4>${project.title}</h4>
+        <p>${project.summary}</p>
+        <div class="tag-list small">${tags(project.tags)}</div>
+        ${project.caseStudy
+          ? `<a href="${project.caseStudy}" aria-label="View ${project.title} case study">Case study →</a>`
+          : project.link
+            ? `<a href="${project.link}" target="_blank" rel="noreferrer" aria-label="View ${project.title} repository">Repository ↗</a>`
+            : `<span class="private-label">Project details available</span>`}
+      </article>
+    `).join("");
+  };
+  drawArchive();
+
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("[data-filter]").forEach((item) => {
+        item.classList.remove("active");
+        item.setAttribute("aria-pressed", "false");
+      });
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
+      drawArchive(button.dataset.filter);
+    });
+  });
 }
 
-
-// ── Projects ────────────────────────────────────────────────
-function renderProjects() {
-  document.querySelector('#projects .projects-grid').innerHTML = PROJECTS.map(p => `
-    <div class="project-card">
-      <div class="project-header">
-        <div>
-          <div class="project-category">${p.category}</div>
-          <h3 class="project-title">${p.title}</h3>
+export function renderExperience() {
+  document.querySelector("[data-experience]").innerHTML = experiences.map((experience, index) => `
+    <article class="experience-item reveal">
+      <div class="experience-period"><span>0${index + 1}</span><p>${experience.period}</p></div>
+      <div class="experience-main">
+        <div class="experience-title-row">
+          <div><h3>${experience.caseStudy ? `<a href="${experience.caseStudy}">${experience.title}</a>` : experience.title}</h3><p>${experience.company}</p></div>
+          <div><p>${experience.group}</p><span>${experience.location}</span></div>
         </div>
-        <div class="project-date">${p.date}</div>
+        <p class="experience-summary">${experience.summary}</p>
+        <ul>${experience.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}</ul>
+        <div class="tag-list">${tags(experience.tools)}</div>
+        ${experience.caseStudy ? `<a class="experience-case-link" href="${experience.caseStudy}">Explore the full co-op case study <span aria-hidden="true">↗</span></a>` : ""}
       </div>
-      <p class="project-description">${p.description}</p>
-      <div class="tech-badges">
-        ${p.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}
-      </div>
-      ${p.links.length ? `<div class="project-links">${p.links.map(l => `<a href="${l.url}" class="project-link">${l.label}</a>`).join('')}</div>` : ''}
-    </div>
-  `).join('');
+    </article>
+  `).join("");
 }
 
-
-// ── Contact ─────────────────────────────────────────────────
-function renderContact() {
-  const { email, linkedin, github } = PROFILE.contact;
-  document.querySelector('#contact .contact-info').innerHTML = `
-    <div class="contact-item">
-      <div class="contact-icon">📧</div>
-      <div class="contact-details">
-        <h3>Email</h3>
-        <a href="mailto:${email}">${email}</a>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">💼</div>
-      <div class="contact-details">
-        <h3>LinkedIn</h3>
-        <a href="${linkedin.url}" target="_blank" rel="noopener">${linkedin.label}</a>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">🐙</div>
-      <div class="contact-details">
-        <h3>GitHub</h3>
-        <a href="${github.url}" target="_blank" rel="noopener">${github.label}</a>
-      </div>
-    </div>
-  `;
+export function renderCapabilities() {
+  document.querySelector("[data-capabilities]").innerHTML = capabilities.map((capability) => `
+    <article class="capability-card reveal">
+      <span class="capability-number">${capability.number}</span>
+      <h3>${capability.title}</h3>
+      <p>${capability.description}</p>
+      <div class="capability-skills">${tags(capability.skills)}</div>
+    </article>
+  `).join("");
 }
 
-
-// ── Footer ──────────────────────────────────────────────────
-function renderFooter() {
-  const { email, linkedin, github } = PROFILE.contact;
-  const { year, tagline } = PROFILE.footer;
-
-  document.querySelector('.social-links').innerHTML = `
-    <a href="${github.url}"   target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
-    <a href="${linkedin.url}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
-    <a href="mailto:${email}" aria-label="Email">📧</a>
-  `;
-  document.querySelector('footer p').textContent =
-    `© ${year} Jaemin Cho · ${tagline}`;
+export function renderEducation() {
+  document.querySelector("[data-education]").innerHTML = education.map((item) => `
+    <article class="education-card reveal">
+      <div class="education-meta"><span>${item.type}</span><span>${item.period}</span></div>
+      <h3>${item.title}</h3>
+      <strong>${item.organization}</strong>
+      <p>${item.note}</p>
+    </article>
+  `).join("");
 }
-
-
-// ── Init ────────────────────────────────────────────────────
-// Scripts load at end of <body>, so the DOM is already built.
-renderHero();
-renderSkills();
-renderExperience();
-renderProjects();
-renderContact();
-renderFooter();

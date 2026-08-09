@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's project case study for an ESP32 autonomous scavenger robot that navigates, collects, classifies, and sorts coloured objects.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Autonomous Scavenger Robot - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page scavenger-page" data-project="autonomous-scavenger">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">MSE 2202 · Introduction to Mechatronic Design</p>
+        <h1>Autonomous Scavenger Robot</h1>
+        <p class="case-lede">A multidisciplinary robot that navigated an arena, collected coloured objects, returned them to a base station, and classified and sorted them—all within a 120-second mission.</p>
+        <p class="case-result-line"><span>Verified result</span><strong>Demonstrated autonomous motion, green-object collection, return-to-base behavior, and colour-directed sorting; sustained throughput remained limited by a funnel jam.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Context</dt><dd>Academic team project</dd></div>
+          <div><dt>Team</dt><dd>Four students</dd></div>
+          <div><dt>Duration</dt><dd>January-March 2025</dd></div>
+          <div><dt>Tools</dt><dd>C++, ESP32, SolidWorks, TCS34725, IR, ultrasonic</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Collect coloured objects and sort them at a base station within a 120-second autonomous mission.</h2></article>
+          <article><span>What we built</span><p>An ESP32 robot with a two-wheel drivetrain, ultrasonic and IR sensing, a rotating-brush intake, a servo bucket, and a separate colour-sorting station.</p></article>
+          <article><span>Result</span><p>The system demonstrated driving, collection, return-to-base behavior, and green-object sorting. A funnel jam prevented reliable continuous sorting.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="scavenger-visual-heading">
+          <div class="project-section-heading">
+            <div><span>System</span><h2 id="scavenger-visual-heading">Robot and sorting station</h2></div>
+            <p>The robot collected objects with a front brush and bucket. At the base, a colour sensor classified each object and a servo-driven rotating gate directed it to the correct output.</p>
+          </div>
+          <div class="project-photo-pair">
+            <figure><img src="../../assets/projects/autonomous-scavenger/intake-physical.jpg" width="700" height="579" alt="Built scavenger robot with ESP32 electronics, ultrasonic sensor, brush intake, and bucket" fetchpriority="high"><figcaption>Built robot and intake</figcaption></figure>
+            <figure><img src="../../assets/projects/autonomous-scavenger/sortation-physical.jpg" width="663" height="731" alt="Built sorting station with funnel, rotating selector, sensor enclosure, and output bin"><figcaption>Built colour-sorting station</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="scavenger-engineering-heading">
+          <div class="project-section-heading">
+            <div><span>How it worked</span><h2 id="scavenger-engineering-heading">Three parts of the mission</h2></div>
+            <p>The drivetrain moved between the arena and base, the intake collected objects while driving, and the station classified and sorted the delivered objects.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="scavenger-validation-heading">
+          <div class="project-section-heading"><div><span>Evidence</span><h2 id="scavenger-validation-heading">Tests and limitations</h2></div></div>
+          <div class="project-validation-grid">
+            <article><h3>What was demonstrated</h3><ul><li>Autonomous motion and timed outbound/return legs</li><li>Collection of a green object and delivery to the station</li><li>Colour classification under bright, dim, and shadowed conditions</li><li>Smooth servo movement to the selected sorting output</li></ul></article>
+            <article><h3>What did not work reliably</h3><p>Objects could jam in the funnel, so the system did not sustain continuous sorting. The next revision needs a guided single-file feed, along with improved power distribution and chassis weight balance.</p></article>
+          </div>
+          <details class="project-technical-detail"><summary>Optional technical evidence</summary><div class="project-technical-grid"><img src="../../assets/projects/autonomous-scavenger/chassis-cad.png" width="833" height="470" alt="SolidWorks CAD model of the robot chassis"><img src="../../assets/projects/autonomous-scavenger/sortation-cad.png" width="1510" height="888" alt="SolidWorks CAD model of the colour-sorting station"><img src="../../assets/projects/autonomous-scavenger/drivetrain-schematic.png" width="1472" height="849" alt="Electrical schematic for the drivetrain and sensors"></div></details>
+        </section>
+
+        <section class="project-context"><span>Team context</span><div><p>This was a collaborative four-person academic project covering embedded software, electrical integration, CAD, fabrication, testing, and final assembly.</p><a class="case-source-link" href="https://github.com/raugust3/autonomous-scavenger-robot" target="_blank" rel="noreferrer">View the team repository <span aria-hidden="true">↗</span></a></div></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>

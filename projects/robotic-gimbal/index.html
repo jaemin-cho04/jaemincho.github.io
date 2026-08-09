@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's project case study for a ROS 2 mobile robot with manual control, autonomous driving, perception, and a custom sensor gimbal.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>ROS 2 Autonomous Robot - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page" data-project="robotic-gimbal">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Integrated robotics project · 2026</p>
+        <h1>ROS 2 Autonomous Robot</h1>
+        <p class="case-lede">A five-person team project combining manual control, autonomous driving, perception, safety logic, and a custom two-axis sensor gimbal.</p>
+        <p class="case-result-line"><span>Verified result</span><strong>Passed manual, autonomous, perception, safety, and integration tests—including a five-minute run without node failure or communication loss.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Context</dt><dd>AISE 4020</dd></div>
+          <div><dt>Team</dt><dd>Five students</dd></div>
+          <div><dt>Platform</dt><dd>Freenove 4WD, Raspberry Pi 4</dd></div>
+          <div><dt>Tools</dt><dd>ROS 2, Python, OpenCV, SolidWorks</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Build a mobile robot that could switch safely between manual and autonomous driving.</h2></article>
+          <article><span>What we built</span><p>A Raspberry Pi robot with ROS 2 control nodes, PS4 teleoperation, autonomous motion, camera person detection, ultrasonic obstacle sensing, and a custom two-axis sensor gimbal.</p></article>
+          <article><span>Result</span><p>The complete system passed its control, sensing, safety, and integration tests and ran for five minutes without a node failure or communication loss.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="robot-visual-heading">
+          <div class="project-section-heading">
+            <div><span>System</span><h2 id="robot-visual-heading">The completed robot</h2></div>
+            <p>The final assembly packaged the compute hardware, drive electronics, bumpers, camera, ultrasonic sensor, servos, and routed cabling into one mobile platform.</p>
+          </div>
+          <figure>
+            <div class="project-visual-mosaic">
+              <img class="project-visual-main" src="../../assets/projects/robotic-gimbal/robot-front-isometric.jpg" width="554" height="459" alt="Completed four-wheel robot viewed from the front, showing its bumpers and sensor gimbal" fetchpriority="high">
+              <img src="../../assets/projects/robotic-gimbal/robot-rear-isometric.jpg" width="546" height="426" alt="Completed robot viewed from the rear, showing its enclosure and routed cabling">
+              <img src="../../assets/projects/robotic-gimbal/robot-cad-assembly.jpg" width="1065" height="599" alt="SolidWorks assembly of the robot with bumpers, enclosure, and sensor gimbal">
+            </div>
+            <figcaption>Physical robot from the front and rear, with the corresponding SolidWorks assembly.</figcaption>
+          </figure>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="robot-engineering-heading">
+          <div class="project-section-heading">
+            <div><span>How it worked</span><h2 id="robot-engineering-heading">Three parts of the system</h2></div>
+            <p>Each part had a specific job: choose and arbitrate motion commands, detect hazards, or keep the sensors mechanically aligned.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="robot-validation-heading">
+          <div class="project-section-heading">
+            <div><span>Evidence</span><h2 id="robot-validation-heading">Tests and limitations</h2></div>
+          </div>
+          <div class="project-validation-grid">
+            <article><h3>What was tested</h3><ul><li>Manual driving and immediate manual override</li><li>Switching between manual and autonomous modes</li><li>Ultrasonic obstacle stopping and person-detection stopping</li><li>Unified ROS 2 launch and five-minute integrated operation</li></ul></article>
+            <article><h3>What remained</h3><p>Communication latency, inconsistent detections, and stop-turn behavior required tuning during integration. This was a validated academic prototype, not a production or safety-certified autonomy system.</p></article>
+          </div>
+        </section>
+
+        <section class="project-context"><span>Team context</span><p>This was a collaborative five-person academic project covering ROS 2 software, mechanical design, system integration, testing, and publication.</p></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>

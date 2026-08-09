@@ -1,46 +1,26 @@
-// ============================================================
-//  SKILLS DATA
-//  Each object is one card in the skills grid.
-//  To add a category: append a new object.
-//  To add a skill: append a string to the tags array.
-// ============================================================
-
-const SKILLS = [
-
+export const capabilities = [
   {
-    icon: "💻",
-    category: "Programming",
-    tags: ["Python", "C/C++", "MATLAB", "SQL"],
+    number: "01",
+    title: "Software & test",
+    description: "Production-minded code, automated validation, clear interfaces, and observable failure modes.",
+    skills: ["Python", "C / C++", "pytest", "REST APIs", "Git", "CI/CD", "Docker", "Linux"],
   },
-
   {
-    icon: "🔌",
-    category: "Embedded Systems",
-    tags: ["Raspberry Pi", "ESP32", "Arduino", "GPIO", "State Machines"],
+    number: "02",
+    title: "Embedded & electronics",
+    description: "Software that reads sensors, drives actuators, and interfaces safely with real electrical systems.",
+    skills: ["Raspberry Pi", "ESP32", "STM32", "GPIO", "Industrial I/O", "Signal conditioning", "Oscilloscopes"],
   },
-
   {
-    icon: "⚡",
-    category: "Hardware & Electronics",
-    tags: ["PCB Design", "Signal Conditioning", "Oscilloscopes", "Industrial I/O"],
+    number: "03",
+    title: "Robotics & control",
+    description: "System integration across sensing, mechanics, state estimation, and feedback control.",
+    skills: ["ROS", "OpenCV", "State machines", "Servo control", "MATLAB", "Simulink", "SolidWorks"],
   },
-
   {
-    icon: "🤖",
-    category: "Robotics & Control",
-    tags: ["ROS", "OpenCV", "Control Systems", "Servo Control"],
+    number: "04",
+    title: "Applied AI & data",
+    description: "Machine learning and computer vision applied with attention to evaluation and real-world constraints.",
+    skills: ["Scikit-learn", "Pandas", "NumPy", "MediaPipe", "Reinforcement learning", "Time series"],
   },
-
-  {
-    icon: "🧠",
-    category: "AI & Data",
-    tags: ["Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Reinforcement Learning"],
-  },
-
-  {
-    icon: "🛠️",
-    category: "Software & DevOps",
-    tags: ["pytest", "Git", "GitLab CI", "Docker", "Linux", "SolidWorks"],
-  },
-
 ];

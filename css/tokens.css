@@ -1,0 +1,17 @@
+:root {
+  --ink: #0b0f14;
+  --ink-soft: #111821;
+  --paper: #f3f1ea;
+  --paper-bright: #fbfaf7;
+  --muted: #697078;
+  --line: rgba(11, 15, 20, 0.15);
+  --line-dark: rgba(255, 255, 255, 0.16);
+  --lime: #c8f53b;
+  --blue: #8bc5ff;
+  --orange: #ff9d5c;
+  --white: #ffffff;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --shell: 1240px;
+  --radius: 2px;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's CAD, assembly-layout, and manufacturing-drawing work for a rehabilitation treadmill gearbox.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Rehabilitation Treadmill Gearbox - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page gearbox-page" data-project="gearbox-cad">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home"><span class="wordmark-mark">JC</span><span class="wordmark-name">Jaemin Cho</span></a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Mechanical design · Power transmission</p>
+        <h1>Rehabilitation Treadmill Gearbox</h1>
+        <p class="case-lede">A single-stage spur gearbox that reduces a 1,750 rpm, 3 hp motor to 280.1 rpm while fitting a constrained rehabilitation-treadmill envelope.</p>
+        <p class="case-result-line"><span>Engineering result</span><strong>The final 6.25:1 configuration passed gear stress, shaft fatigue, bearing-life, and deflection checks. I owned the CAD assembly, layout validation, and 2D drawing package.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Context</dt><dd>MSE 3380B team project</dd></div>
+          <div><dt>Team</dt><dd>3 students</dd></div>
+          <div><dt>Reduction</dt><dd>1,750 → 280.1 rpm</dd></div>
+          <div><dt>Tools</dt><dd>SolidWorks, engineering drawings, Shigley/AGMA analysis</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Transmit the worst-case treadmill load inside a 12–14 × 8 × 8 in packaging envelope.</h2></article>
+          <article><span>What we designed</span><p>A 32/200-tooth spur gearset, keyed AISI 4340 shafts, straddle-mounted bearings, and a split aluminum housing.</p></article>
+          <article><span>Result</span><p>The analytical design met the stated safety-factor, bearing-life, and shaft-deflection criteria.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="architecture-heading">
+          <div class="project-section-heading">
+            <div><span>System at a glance</span><h2 id="architecture-heading">One reduction stage, traceable end to end</h2></div>
+            <p>The gear ratio converts motor speed into the torque required at the treadmill roller. The shaft locations in the CAD assembly match the same load path used for analysis.</p>
+          </div>
+          <div class="gearbox-flow" aria-label="Gearbox power flow from motor to treadmill roller">
+            <article class="gearbox-stage"><span>Input</span><strong>3 hp motor</strong><p>1,750 rpm · 108.04 lb-in</p></article>
+            <div class="gearbox-arrow"><b>32T</b><i aria-hidden="true">→</i></div>
+            <article class="gearbox-stage gearbox-stage-center"><span>Single stage</span><strong>6.25:1</strong><p>32 DP · 20° pressure angle</p></article>
+            <div class="gearbox-arrow"><b>200T</b><i aria-hidden="true">→</i></div>
+            <article class="gearbox-stage"><span>Output</span><strong>Treadmill roller</strong><p>280.1 rpm · 661.53 lb-in</p></article>
+          </div>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="engineering-heading">
+          <div class="project-section-heading">
+            <div><span>My engineering work</span><h2 id="engineering-heading">From requirements to drawing-ready assembly</h2></div>
+            <p>My work centred on the physical definition of the gearbox: CAD modelling, interface checks, assembly-layout validation, and manufacturing documentation.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="validation-heading">
+          <div class="project-section-heading">
+            <div><span>Validation</span><h2 id="validation-heading">The selected geometry cleared each design check</h2></div>
+            <p>These are the detailed calculation-table results from the team report. They show why the chosen gears, shafts, and bearing layout were retained in the final CAD assembly.</p>
+          </div>
+          <div class="project-results-layout">
+            <table class="forecast-table">
+              <thead><tr><th>Design check</th><th>Result</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Gear bending safety factor</td><td>3.15</td><td>Pass</td></tr>
+                <tr><td>Gear contact safety factor</td><td>3.34</td><td>Pass</td></tr>
+                <tr><td>Input shaft fatigue safety factor</td><td>3.05</td><td>Pass</td></tr>
+                <tr><td>Output shaft fatigue safety factor</td><td>3.94</td><td>Pass</td></tr>
+                <tr><td>Input shaft deflection</td><td>0.00194 in</td><td>Pass</td></tr>
+                <tr><td>Output shaft deflection</td><td>0.00094 in</td><td>Pass</td></tr>
+              </tbody>
+            </table>
+            <article><h3>Why the layout matters</h3><ul><li>Bearings on both sides of each gear reduce overhung loading and support alignment.</li><li>The split clamshell housing enables shaft-and-gear installation without trapping components.</li><li>The selected shaft diameters remain below the 0.005 in deflection limit.</li><li>Commercial bearings exceeded the required dynamic load ratings.</li></ul></article>
+          </div>
+        </section>
+
+        <section class="project-media" aria-labelledby="evidence-heading">
+          <div class="project-section-heading">
+            <div><span>Analysis evidence</span><h2 id="evidence-heading">Shaft loading used to verify the assembly</h2></div>
+            <p>The two diagrams preserve the direction, magnitude, and location of the shear, bending moment, and transmitted torque used in the shaft checks.</p>
+          </div>
+          <div class="gearbox-evidence-grid">
+            <figure><a href="../../assets/projects/gearbox/input-shaft-load-diagrams.png" target="_blank" rel="noopener"><img src="../../assets/projects/gearbox/input-shaft-load-diagrams.png" alt="Input shaft shear force, bending moment, and torque diagrams" loading="lazy"></a><figcaption><strong>Input shaft.</strong> 115 lbf bearing reactions and 108.04 lb-in transmitted torque. Select to enlarge.</figcaption></figure>
+            <figure><a href="../../assets/projects/gearbox/output-shaft-load-diagrams.png" target="_blank" rel="noopener"><img src="../../assets/projects/gearbox/output-shaft-load-diagrams.png" alt="Output shaft shear force, bending moment, and torque diagrams" loading="lazy"></a><figcaption><strong>Output shaft.</strong> The same gear-force reactions with 661.53 lb-in output torque. Select to enlarge.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="project-context"><span>Scope and ownership</span><p>This was a three-person design project. I owned CAD modelling, assembly-layout validation, 2D drawing preparation, and appendix organization. Gear, shaft, bearing, fatigue, and deflection calculations are presented here as team results. The submitted report documents an analytical and CAD design; it does not claim a fabricated or physically tested prototype.</p></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing"><div class="case-wrap case-next-inner"><p>Explore more of my work</p><a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a></div></nav>
+  </main>
+
+  <footer class="site-footer"><div class="case-wrap footer-inner"><p>© <span data-current-year></span> Jaemin Cho</p><a href="#case-main">Back to top ↑</a></div></footer>
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>

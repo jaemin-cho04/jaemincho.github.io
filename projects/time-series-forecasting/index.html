@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's time-series forecasting case study benchmarking LSTM, GRU, and TCN models on German electricity demand.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Electricity Load Forecasting - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page forecast-page" data-project="time-series-forecasting">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Deep learning · Time-series forecasting</p>
+        <h1>Electricity Load Forecasting</h1>
+        <p class="case-lede">A controlled study of LSTM, GRU, and Temporal Convolutional Networks for predicting Germany's next hour of electricity demand—and testing whether renewable-generation context improves the forecast.</p>
+        <p class="case-result-line"><span>Verified result</span><strong>The multivariate GRU reached 463.21 MW MAE in the final tuned comparison—a 16.51% improvement over the load-only GRU.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Context</dt><dd>Academic team project</dd></div>
+          <div><dt>Team</dt><dd>Four students</dd></div>
+          <div><dt>Forecast</dt><dd>Next hour</dd></div>
+          <div><dt>Tools</dt><dd>Python, TensorFlow, Keras, Pandas, scikit-learn</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Predict Germany's electricity demand one hour in advance.</h2></article>
+          <article><span>What we built</span><p>A Python pipeline that converted 50,401 hourly records into 24-hour input windows and trained LSTM, GRU, and TCN forecasting models.</p></article>
+          <article><span>Result</span><p>The multivariate GRU reached 463.21 MW MAE and improved 16.51% over the same GRU trained only on past electrical load.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="forecast-visual-heading">
+          <div class="project-section-heading">
+            <div><span>Output</span><h2 id="forecast-visual-heading">Actual demand versus forecast</h2></div>
+            <p>The blue line is the multivariate GRU prediction. It used past load, wind generation, solar generation, and calendar features; the orange line used past load only.</p>
+          </div>
+          <figure><img src="../../assets/projects/time-series-forecasting/gru-forecast-comparison.png" width="1245" height="540" alt="Chart comparing actual electricity load with univariate and multivariate GRU predictions over 200 test hours" fetchpriority="high"><figcaption>First 200 hours from the chronological test period.</figcaption></figure>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="forecast-engineering-heading">
+          <div class="project-section-heading">
+            <div><span>How it worked</span><h2 id="forecast-engineering-heading">Data, models, and feature comparison</h2></div>
+            <p>The same next-hour prediction task was used throughout so the architectures and input features could be compared directly.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="forecast-validation-heading">
+          <div class="project-section-heading"><div><span>Evidence</span><h2 id="forecast-validation-heading">Model results and limitations</h2></div></div>
+          <div class="project-results-layout">
+            <table class="forecast-table">
+              <thead><tr><th>Final model</th><th>MAE</th><th>RMSE</th></tr></thead>
+              <tbody><tr><td>Optimized LSTM</td><td>771.94 MW</td><td>955.39 MW</td></tr><tr class="forecast-best"><td>Multivariate GRU</td><td>463.21 MW</td><td>600.71 MW</td></tr><tr><td>Optimized TCN</td><td>514.50 MW</td><td>666.71 MW</td></tr></tbody>
+            </table>
+            <article><h3>Important limitation</h3><p>An earlier manually configured TCN produced a lower test error than the final tuned models. Because the test set was viewed during experimentation, the project cannot make a definitive claim that the GRU is the best architecture. A stronger follow-up would use walk-forward validation, a seasonal-naive baseline, split-local imputation, and one untouched final test period.</p></article>
+          </div>
+        </section>
+
+        <section class="project-context"><span>Team context</span><p>This was a collaborative four-person academic project covering data preparation, TensorFlow modeling, hyperparameter experiments, evaluation, and reporting. Every metric shown here comes from the submitted notebook.</p></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing">
+      <div class="case-wrap case-next-inner">
+        <p>Explore more of my work</p>
+        <a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="case-wrap footer-inner">
+      <p>© <span data-current-year></span> Jaemin Cho</p>
+      <a href="#case-main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>

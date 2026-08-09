@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jaemin Cho's requirements-based power and temperature verification work for Western Skylark CubeSat remote receiver stations.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>CubeSat Remote-Station Verification - Jaemin Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/case-study.css">
+</head>
+<body class="case-page case-page-compact project-case-page cubesat-page" data-project="skylark-cubesat">
+  <a class="skip-link" href="#case-main">Skip to case study</a>
+
+  <header class="case-header">
+    <div class="case-wrap case-nav">
+      <a class="wordmark" href="../../index.html" aria-label="Jaemin Cho, portfolio home">
+        <span class="wordmark-mark">JC</span>
+        <span class="wordmark-name">Jaemin Cho</span>
+      </a>
+      <a class="case-back" href="../../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </div>
+  </header>
+
+  <main id="case-main">
+    <article>
+      <header class="case-intro case-wrap">
+        <p class="case-kicker">Power systems · Requirements verification</p>
+        <h1>CubeSat Remote-Station Verification</h1>
+        <p class="case-lede">Engineering analysis for the solar-powered Motus receiver stations that support Western Skylark CubeSat operations in London, Moosonee, and Churchill.</p>
+        <p class="case-result-line"><span>Engineering result</span><strong>Temperature capability and normal winter charging passed; the analysis identified a battery-autonomy shortfall under a seven-day, zero-solar blackout.</strong></p>
+
+        <dl class="case-facts" aria-label="Project details">
+          <div><dt>Organization</dt><dd>Western Skylark CubeSat</dd></div>
+          <div><dt>Period</dt><dd>2025 — 2026</dd></div>
+          <div><dt>System</dt><dd>Remote Motus receiver</dd></div>
+          <div><dt>Methods</dt><dd>Datasheet review, duty-cycle modeling, worst-case analysis</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-wrap project-body">
+        <section class="project-plain-summary" aria-label="Project summary">
+          <article><span>Goal</span><h2>Verify temperature, charging, and seven-day stored-power requirements before deployment.</h2></article>
+          <article><span>What I produced</span><p>Two traceable engineering records covering component operating limits and a full-year power-supply analysis.</p></article>
+          <article><span>Result</span><p>Two requirements passed; one conditional pass exposed a 4.31-day blackout limit and drove concrete mitigation options.</p></article>
+        </section>
+
+        <section class="project-media" aria-labelledby="verification-heading">
+          <div class="project-section-heading">
+            <div><span>Decision summary</span><h2 id="verification-heading">Three requirements, one clear risk</h2></div>
+            <p>The analysis distinguishes normal winter operation from a complete solar blackout. The panel can replenish the daily load in the modeled winter case, but one cold-derated battery cannot sustain seven days without solar input.</p>
+          </div>
+          <div class="verification-grid" role="list" aria-label="Requirement verification results">
+            <article class="verification-card verification-pass" role="listitem"><span>RS-42 · Temperature</span><strong>Pass</strong><b>-30 to 85 °C</b><p>Verified electronics range versus a -29 to 26 °C expected station envelope.</p></article>
+            <article class="verification-card verification-pass" role="listitem"><span>RS-24 · Charging</span><strong>Pass</strong><b>360 Wh/day</b><p>Modeled worst-location winter generation versus 252.33 Wh/day demand.</p></article>
+            <article class="verification-card verification-risk" role="listitem"><span>RS-25 · Autonomy</span><strong>Conditional</strong><b>4.31 of 7 days</b><p>Cold-derated battery endurance under a complete zero-solar blackout.</p></article>
+          </div>
+        </section>
+
+        <section class="project-engineering" aria-labelledby="engineering-heading">
+          <div class="project-section-heading">
+            <div><span>How it worked</span><h2 id="engineering-heading">From component limits to system decisions</h2></div>
+            <p>Each review began with a written requirement, documented the source assumptions, performed the calculation, and ended with an explicit result and recommendation.</p>
+          </div>
+          <div class="workstream-list" data-project-contributions></div>
+        </section>
+
+        <section class="project-validation" aria-labelledby="evidence-heading">
+          <div class="project-section-heading"><div><span>Evidence</span><h2 id="evidence-heading">Key inputs and calculated outputs</h2></div><p>The figures below come from the submitted review records, not estimates created for this portfolio.</p></div>
+          <div class="project-results-layout">
+            <table class="forecast-table">
+              <thead><tr><th>Quantity</th><th>Value</th></tr></thead>
+              <tbody>
+                <tr><td>Daily receiver demand</td><td>252.33 Wh</td></tr>
+                <tr><td>Seven-day energy need</td><td>1,766.31 Wh</td></tr>
+                <tr><td>Cold-derated battery</td><td>1,088 Wh</td></tr>
+                <tr><td>Winter solar generation</td><td>360 Wh/day</td></tr>
+              </tbody>
+            </table>
+            <article><h3>Recommendations from the gap</h3><ul><li>Add a second or larger battery.</li><li>Reduce idle draw or introduce a sub-5 W low-power mode.</li><li>Use subsystem shutdown logic during extended low-solar periods.</li><li>Consider snow-mitigation hardware and complete environmental testing before deployment.</li></ul></article>
+          </div>
+        </section>
+
+        <section class="project-context"><span>Scope and ownership</span><p>I authored the RS-24 and RS-25 power-supply verification and revised it from team feedback. I also contributed the RS-42 temperature verification with two teammates. This case study covers the remote ground station—not the spacecraft—and reports analytical verification; environmental and field testing remain follow-up work.</p></section>
+      </div>
+    </article>
+
+    <nav class="case-next" aria-label="Continue browsing"><div class="case-wrap case-next-inner"><p>Explore more of my work</p><a href="../../index.html#work">Return to all projects <span aria-hidden="true">→</span></a></div></nav>
+  </main>
+
+  <footer class="site-footer"><div class="case-wrap footer-inner"><p>© <span data-current-year></span> Jaemin Cho</p><a href="#case-main">Back to top ↑</a></div></footer>
+  <script type="module" src="../../js/project-detail.js"></script>
+</body>
+</html>
