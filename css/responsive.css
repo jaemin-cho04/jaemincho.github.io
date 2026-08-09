@@ -23,6 +23,7 @@
   .hero { padding: 125px 0 70px; }
   .hero h1 { font-size: clamp(3.35rem, 16vw, 5rem); }
   .hero-actions { align-items: flex-start; flex-direction: column; }
+  .hero-links { align-items: flex-start; flex-direction: column; gap: 10px; }
   .hero-meta { grid-template-columns: 1fr; gap: 18px; }
   .hero-profile { width: 100%; }
   .proof-grid { grid-template-columns: 1fr 1fr; }

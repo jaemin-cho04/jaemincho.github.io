@@ -6,8 +6,9 @@ export const profile = {
   bio: "Engineering student with co-op experience in radio telescope validation and aviation communications, focused on embedded software, system integration, robotics, and test automation.",
   email: "justin_cho@icloud.com",
   links: [
-    { label: "GitHub", url: "https://github.com/jaemin-cho04" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/jaemin-cho-854112272" },
+    { label: "LinkedIn", display: "LinkedIn", url: "https://www.linkedin.com/in/jaemin-cho-854112272", external: true },
+    { label: "GitHub", display: "GitHub", url: "https://github.com/jaemin-cho04", external: true },
+    { label: "Email", display: "justin_cho@icloud.com", url: "mailto:justin_cho@icloud.com", external: false },
   ],
   proofPoints: [
     { value: "26 m", label: "Radio telescope validation" },

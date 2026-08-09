@@ -18,8 +18,13 @@ export function renderProfile() {
       <span>${point.label}</span>
     </div>
   `).join("");
+  document.querySelector("[data-hero-links]").innerHTML = profile.links.map((link) => `
+    <a href="${link.url}"${link.external ? ' target="_blank" rel="noreferrer"' : ""}>
+      ${link.display} <span aria-hidden="true">${link.external ? "↗" : "→"}</span>
+    </a>
+  `).join("");
   document.querySelector("[data-contact-links]").innerHTML = profile.links.map((link) => `
-    <a href="${link.url}" target="_blank" rel="noreferrer">${link.label} <span aria-hidden="true">↗</span></a>
+    <a href="${link.url}"${link.external ? ' target="_blank" rel="noreferrer"' : ""}>${link.label} <span aria-hidden="true">${link.external ? "↗" : "→"}</span></a>
   `).join("");
 }
 
