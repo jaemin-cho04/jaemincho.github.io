@@ -107,8 +107,8 @@ h2 { font-size: clamp(2.5rem, 5vw, 4.8rem); margin-bottom: 0; }
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 600ms ease, transform 600ms ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
