@@ -1,10 +1,13 @@
-const caseStudyModules = import.meta.glob("../data/case-studies/*.js", {
-  eager: true,
-  import: "default",
-});
+import navCanada from "../data/case-studies/nav-canada.js";
+import nrcDrao from "../data/case-studies/nrc-drao.js";
+
+const caseStudies = {
+  "nav-canada": navCanada,
+  "nrc-drao": nrcDrao,
+};
 
 const caseStudyId = document.body.dataset.caseStudy;
-const caseStudy = caseStudyModules[`../data/case-studies/${caseStudyId}.js`];
+const caseStudy = caseStudies[caseStudyId];
 
 const contributions = document.querySelector("[data-contributions]");
 
