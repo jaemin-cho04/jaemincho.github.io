@@ -3,7 +3,7 @@ export const profile = {
   role: "Mechatronics & AI Systems Engineer",
   location: "Penticton, BC / London, ON",
   availability: "Graduating April 2027",
-  bio: "I’m a Mechatronics and Artificial Intelligence Systems Engineering student who develops reliable software for robotics, RF instrumentation, automation, and intelligent physical systems.",
+  bio: "Engineering student with co-op experience in radio telescope validation and aviation communications, focused on embedded software, system integration, robotics, and test automation.",
   email: "justin_cho@icloud.com",
   links: [
     { label: "GitHub", url: "https://github.com/jaemin-cho04" },
